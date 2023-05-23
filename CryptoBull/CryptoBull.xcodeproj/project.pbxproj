@@ -16,6 +16,7 @@
 		046D08A82A1C4FD800D684C0 /* CryptoBullTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D08A72A1C4FD800D684C0 /* CryptoBullTests.swift */; };
 		046D08B22A1C4FD800D684C0 /* CryptoBullUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D08B12A1C4FD800D684C0 /* CryptoBullUITests.swift */; };
 		046D08B42A1C4FD800D684C0 /* CryptoBullUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D08B32A1C4FD800D684C0 /* CryptoBullUITestsLaunchTests.swift */; };
+		046D08C22A1C506F00D684C0 /* Crypto.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 046D08C02A1C506F00D684C0 /* Crypto.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		046D08AD2A1C4FD800D684C0 /* CryptoBullUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoBullUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		046D08B12A1C4FD800D684C0 /* CryptoBullUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoBullUITests.swift; sourceTree = "<group>"; };
 		046D08B32A1C4FD800D684C0 /* CryptoBullUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoBullUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		046D08C12A1C506F00D684C0 /* Crypto.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Crypto.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +100,10 @@
 		046D08902A1C4FD700D684C0 /* CryptoBull */ = {
 			isa = PBXGroup;
 			children = (
+				046D08C52A1C50C200D684C0 /* ViewModel */,
+				046D08C42A1C50B800D684C0 /* View */,
+				046D08C32A1C50AC00D684C0 /* Model */,
 				046D08912A1C4FD700D684C0 /* CryptoBullApp.swift */,
-				046D08932A1C4FD700D684C0 /* ContentView.swift */,
 				046D08952A1C4FD800D684C0 /* Assets.xcassets */,
 				046D089A2A1C4FD800D684C0 /* Persistence.swift */,
 				046D089C2A1C4FD800D684C0 /* CryptoBull.xcdatamodeld */,
@@ -131,6 +135,29 @@
 				046D08B32A1C4FD800D684C0 /* CryptoBullUITestsLaunchTests.swift */,
 			);
 			path = CryptoBullUITests;
+			sourceTree = "<group>";
+		};
+		046D08C32A1C50AC00D684C0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				046D08C02A1C506F00D684C0 /* Crypto.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		046D08C42A1C50B800D684C0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				046D08932A1C4FD700D684C0 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		046D08C52A1C50C200D684C0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +293,7 @@
 				046D089B2A1C4FD800D684C0 /* Persistence.swift in Sources */,
 				046D08942A1C4FD700D684C0 /* ContentView.swift in Sources */,
 				046D08922A1C4FD700D684C0 /* CryptoBullApp.swift in Sources */,
+				046D08C22A1C506F00D684C0 /* Crypto.xcdatamodeld in Sources */,
 				046D089E2A1C4FD800D684C0 /* CryptoBull.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -600,6 +628,16 @@
 			);
 			currentVersion = 046D089D2A1C4FD800D684C0 /* CryptoBull.xcdatamodel */;
 			path = CryptoBull.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		046D08C02A1C506F00D684C0 /* Crypto.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				046D08C12A1C506F00D684C0 /* Crypto.xcdatamodel */,
+			);
+			currentVersion = 046D08C12A1C506F00D684C0 /* Crypto.xcdatamodel */;
+			path = Crypto.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
