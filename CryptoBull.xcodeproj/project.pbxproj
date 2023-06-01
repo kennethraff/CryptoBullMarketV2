@@ -259,7 +259,7 @@
 		9BF637D12A20801900F13CC5 = {
 			isa = PBXGroup;
 			children = (
-				9BF637DC2A20801A00F13CC5 /* CryptoTracker */,
+				9BF637DC2A20801A00F13CC5 /* CryptoBullAPP */,
 				9BF637DB2A20801A00F13CC5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -272,7 +272,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9BF637DC2A20801A00F13CC5 /* CryptoTracker */ = {
+		9BF637DC2A20801A00F13CC5 /* CryptoBullAPP */ = {
 			isa = PBXGroup;
 			children = (
 				9B1B646F2A23A13D00D39C4D /* UIApp */,
@@ -284,7 +284,7 @@
 				9BF637EB2A2080F700F13CC5 /* Assets.xcassets */,
 				9BF637E32A20801C00F13CC5 /* Preview Content */,
 			);
-			path = CryptoTracker;
+			path = CryptoBullAPP;
 			sourceTree = "<group>";
 		};
 		9BF637E32A20801C00F13CC5 /* Preview Content */ = {
