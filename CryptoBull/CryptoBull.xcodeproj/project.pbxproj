@@ -1,0 +1,647 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		046D08922A1C4FD700D684C0 /* CryptoBullApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D08912A1C4FD700D684C0 /* CryptoBullApp.swift */; };
+		046D08942A1C4FD700D684C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D08932A1C4FD700D684C0 /* ContentView.swift */; };
+		046D08962A1C4FD800D684C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 046D08952A1C4FD800D684C0 /* Assets.xcassets */; };
+		046D08992A1C4FD800D684C0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 046D08982A1C4FD800D684C0 /* Preview Assets.xcassets */; };
+		046D089B2A1C4FD800D684C0 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D089A2A1C4FD800D684C0 /* Persistence.swift */; };
+		046D089E2A1C4FD800D684C0 /* CryptoBull.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 046D089C2A1C4FD800D684C0 /* CryptoBull.xcdatamodeld */; };
+		046D08A82A1C4FD800D684C0 /* CryptoBullTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D08A72A1C4FD800D684C0 /* CryptoBullTests.swift */; };
+		046D08B22A1C4FD800D684C0 /* CryptoBullUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D08B12A1C4FD800D684C0 /* CryptoBullUITests.swift */; };
+		046D08B42A1C4FD800D684C0 /* CryptoBullUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D08B32A1C4FD800D684C0 /* CryptoBullUITestsLaunchTests.swift */; };
+		046D08C22A1C506F00D684C0 /* Crypto.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 046D08C02A1C506F00D684C0 /* Crypto.xcdatamodeld */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		046D08A42A1C4FD800D684C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 046D08862A1C4FD700D684C0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 046D088D2A1C4FD700D684C0;
+			remoteInfo = CryptoBull;
+		};
+		046D08AE2A1C4FD800D684C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 046D08862A1C4FD700D684C0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 046D088D2A1C4FD700D684C0;
+			remoteInfo = CryptoBull;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		046D088E2A1C4FD700D684C0 /* CryptoBull.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoBull.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		046D08912A1C4FD700D684C0 /* CryptoBullApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoBullApp.swift; sourceTree = "<group>"; };
+		046D08932A1C4FD700D684C0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		046D08952A1C4FD800D684C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		046D08982A1C4FD800D684C0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		046D089A2A1C4FD800D684C0 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		046D089D2A1C4FD800D684C0 /* CryptoBull.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CryptoBull.xcdatamodel; sourceTree = "<group>"; };
+		046D08A32A1C4FD800D684C0 /* CryptoBullTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoBullTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		046D08A72A1C4FD800D684C0 /* CryptoBullTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoBullTests.swift; sourceTree = "<group>"; };
+		046D08AD2A1C4FD800D684C0 /* CryptoBullUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoBullUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		046D08B12A1C4FD800D684C0 /* CryptoBullUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoBullUITests.swift; sourceTree = "<group>"; };
+		046D08B32A1C4FD800D684C0 /* CryptoBullUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoBullUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		046D08C12A1C506F00D684C0 /* Crypto.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Crypto.xcdatamodel; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		046D088B2A1C4FD700D684C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		046D08A02A1C4FD800D684C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		046D08AA2A1C4FD800D684C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		046D08852A1C4FD700D684C0 = {
+			isa = PBXGroup;
+			children = (
+				046D08902A1C4FD700D684C0 /* CryptoBull */,
+				046D08A62A1C4FD800D684C0 /* CryptoBullTests */,
+				046D08B02A1C4FD800D684C0 /* CryptoBullUITests */,
+				046D088F2A1C4FD700D684C0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		046D088F2A1C4FD700D684C0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				046D088E2A1C4FD700D684C0 /* CryptoBull.app */,
+				046D08A32A1C4FD800D684C0 /* CryptoBullTests.xctest */,
+				046D08AD2A1C4FD800D684C0 /* CryptoBullUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		046D08902A1C4FD700D684C0 /* CryptoBull */ = {
+			isa = PBXGroup;
+			children = (
+				046D08C52A1C50C200D684C0 /* ViewModel */,
+				046D08C42A1C50B800D684C0 /* View */,
+				046D08C32A1C50AC00D684C0 /* Model */,
+				046D08912A1C4FD700D684C0 /* CryptoBullApp.swift */,
+				046D08952A1C4FD800D684C0 /* Assets.xcassets */,
+				046D089A2A1C4FD800D684C0 /* Persistence.swift */,
+				046D089C2A1C4FD800D684C0 /* CryptoBull.xcdatamodeld */,
+				046D08972A1C4FD800D684C0 /* Preview Content */,
+			);
+			path = CryptoBull;
+			sourceTree = "<group>";
+		};
+		046D08972A1C4FD800D684C0 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				046D08982A1C4FD800D684C0 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		046D08A62A1C4FD800D684C0 /* CryptoBullTests */ = {
+			isa = PBXGroup;
+			children = (
+				046D08A72A1C4FD800D684C0 /* CryptoBullTests.swift */,
+			);
+			path = CryptoBullTests;
+			sourceTree = "<group>";
+		};
+		046D08B02A1C4FD800D684C0 /* CryptoBullUITests */ = {
+			isa = PBXGroup;
+			children = (
+				046D08B12A1C4FD800D684C0 /* CryptoBullUITests.swift */,
+				046D08B32A1C4FD800D684C0 /* CryptoBullUITestsLaunchTests.swift */,
+			);
+			path = CryptoBullUITests;
+			sourceTree = "<group>";
+		};
+		046D08C32A1C50AC00D684C0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				046D08C02A1C506F00D684C0 /* Crypto.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		046D08C42A1C50B800D684C0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				046D08932A1C4FD700D684C0 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		046D08C52A1C50C200D684C0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		046D088D2A1C4FD700D684C0 /* CryptoBull */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 046D08B72A1C4FD800D684C0 /* Build configuration list for PBXNativeTarget "CryptoBull" */;
+			buildPhases = (
+				046D088A2A1C4FD700D684C0 /* Sources */,
+				046D088B2A1C4FD700D684C0 /* Frameworks */,
+				046D088C2A1C4FD700D684C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CryptoBull;
+			productName = CryptoBull;
+			productReference = 046D088E2A1C4FD700D684C0 /* CryptoBull.app */;
+			productType = "com.apple.product-type.application";
+		};
+		046D08A22A1C4FD800D684C0 /* CryptoBullTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 046D08BA2A1C4FD800D684C0 /* Build configuration list for PBXNativeTarget "CryptoBullTests" */;
+			buildPhases = (
+				046D089F2A1C4FD800D684C0 /* Sources */,
+				046D08A02A1C4FD800D684C0 /* Frameworks */,
+				046D08A12A1C4FD800D684C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				046D08A52A1C4FD800D684C0 /* PBXTargetDependency */,
+			);
+			name = CryptoBullTests;
+			productName = CryptoBullTests;
+			productReference = 046D08A32A1C4FD800D684C0 /* CryptoBullTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		046D08AC2A1C4FD800D684C0 /* CryptoBullUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 046D08BD2A1C4FD800D684C0 /* Build configuration list for PBXNativeTarget "CryptoBullUITests" */;
+			buildPhases = (
+				046D08A92A1C4FD800D684C0 /* Sources */,
+				046D08AA2A1C4FD800D684C0 /* Frameworks */,
+				046D08AB2A1C4FD800D684C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				046D08AF2A1C4FD800D684C0 /* PBXTargetDependency */,
+			);
+			name = CryptoBullUITests;
+			productName = CryptoBullUITests;
+			productReference = 046D08AD2A1C4FD800D684C0 /* CryptoBullUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		046D08862A1C4FD700D684C0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					046D088D2A1C4FD700D684C0 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					046D08A22A1C4FD800D684C0 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 046D088D2A1C4FD700D684C0;
+					};
+					046D08AC2A1C4FD800D684C0 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 046D088D2A1C4FD700D684C0;
+					};
+				};
+			};
+			buildConfigurationList = 046D08892A1C4FD700D684C0 /* Build configuration list for PBXProject "CryptoBull" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 046D08852A1C4FD700D684C0;
+			productRefGroup = 046D088F2A1C4FD700D684C0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				046D088D2A1C4FD700D684C0 /* CryptoBull */,
+				046D08A22A1C4FD800D684C0 /* CryptoBullTests */,
+				046D08AC2A1C4FD800D684C0 /* CryptoBullUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		046D088C2A1C4FD700D684C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				046D08992A1C4FD800D684C0 /* Preview Assets.xcassets in Resources */,
+				046D08962A1C4FD800D684C0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		046D08A12A1C4FD800D684C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		046D08AB2A1C4FD800D684C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		046D088A2A1C4FD700D684C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				046D089B2A1C4FD800D684C0 /* Persistence.swift in Sources */,
+				046D08942A1C4FD700D684C0 /* ContentView.swift in Sources */,
+				046D08922A1C4FD700D684C0 /* CryptoBullApp.swift in Sources */,
+				046D08C22A1C506F00D684C0 /* Crypto.xcdatamodeld in Sources */,
+				046D089E2A1C4FD800D684C0 /* CryptoBull.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		046D089F2A1C4FD800D684C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				046D08A82A1C4FD800D684C0 /* CryptoBullTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		046D08A92A1C4FD800D684C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				046D08B42A1C4FD800D684C0 /* CryptoBullUITestsLaunchTests.swift in Sources */,
+				046D08B22A1C4FD800D684C0 /* CryptoBullUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		046D08A52A1C4FD800D684C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 046D088D2A1C4FD700D684C0 /* CryptoBull */;
+			targetProxy = 046D08A42A1C4FD800D684C0 /* PBXContainerItemProxy */;
+		};
+		046D08AF2A1C4FD800D684C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 046D088D2A1C4FD700D684C0 /* CryptoBull */;
+			targetProxy = 046D08AE2A1C4FD800D684C0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		046D08B52A1C4FD800D684C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		046D08B62A1C4FD800D684C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		046D08B82A1C4FD800D684C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CryptoBull/Preview Content\"";
+				DEVELOPMENT_TEAM = NDGX4SV6M6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mad.CryptoBull;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		046D08B92A1C4FD800D684C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CryptoBull/Preview Content\"";
+				DEVELOPMENT_TEAM = NDGX4SV6M6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mad.CryptoBull;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		046D08BB2A1C4FD800D684C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NDGX4SV6M6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mad.CryptoBullTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CryptoBull.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CryptoBull";
+			};
+			name = Debug;
+		};
+		046D08BC2A1C4FD800D684C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NDGX4SV6M6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mad.CryptoBullTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CryptoBull.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CryptoBull";
+			};
+			name = Release;
+		};
+		046D08BE2A1C4FD800D684C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NDGX4SV6M6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mad.CryptoBullUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CryptoBull;
+			};
+			name = Debug;
+		};
+		046D08BF2A1C4FD800D684C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NDGX4SV6M6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mad.CryptoBullUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CryptoBull;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		046D08892A1C4FD700D684C0 /* Build configuration list for PBXProject "CryptoBull" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				046D08B52A1C4FD800D684C0 /* Debug */,
+				046D08B62A1C4FD800D684C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		046D08B72A1C4FD800D684C0 /* Build configuration list for PBXNativeTarget "CryptoBull" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				046D08B82A1C4FD800D684C0 /* Debug */,
+				046D08B92A1C4FD800D684C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		046D08BA2A1C4FD800D684C0 /* Build configuration list for PBXNativeTarget "CryptoBullTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				046D08BB2A1C4FD800D684C0 /* Debug */,
+				046D08BC2A1C4FD800D684C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		046D08BD2A1C4FD800D684C0 /* Build configuration list for PBXNativeTarget "CryptoBullUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				046D08BE2A1C4FD800D684C0 /* Debug */,
+				046D08BF2A1C4FD800D684C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		046D089C2A1C4FD800D684C0 /* CryptoBull.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				046D089D2A1C4FD800D684C0 /* CryptoBull.xcdatamodel */,
+			);
+			currentVersion = 046D089D2A1C4FD800D684C0 /* CryptoBull.xcdatamodel */;
+			path = CryptoBull.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		046D08C02A1C506F00D684C0 /* Crypto.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				046D08C12A1C506F00D684C0 /* Crypto.xcdatamodel */,
+			);
+			currentVersion = 046D08C12A1C506F00D684C0 /* Crypto.xcdatamodel */;
+			path = Crypto.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 046D08862A1C4FD700D684C0 /* Project object */;
+}
