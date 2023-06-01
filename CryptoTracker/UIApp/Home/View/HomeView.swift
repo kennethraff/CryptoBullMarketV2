@@ -14,6 +14,9 @@ struct HomeView: View {
     @State private var showPortfolioView: Bool = false // New sheet
     @State private var showSettingView: Bool = false // Setting
     
+    @State private var showNews: Bool = false
+    @State private var showHome: Bool = false
+    
     @State private var selectedCoin: CoinModel? = nil
     @State private var showDetailView: Bool = false
     
@@ -28,25 +31,56 @@ struct HomeView: View {
                 })
              
 //            Content layer
-            VStack{
-                homeHeader
-                
-                HomeStatsView(showPortfolio: $showPortfolio)
-                
-                SearchBarView(searchText: $vm.searchText)
-                
-                columnTitles
-                
-                if !showPortfolio{
-                    allCoinList
-                        .transition(.move(edge: .leading))
-                }
-                if showPortfolio{
+            VStack {
+    // homeHeader
+                        
+                if showPortfolio && !showHome {
+                    Text("Portfolio")
+                        .font(.headline)
+                        .foregroundColor(Color.theme.accent)
+                        .fontWeight(.bold)
+                        .padding(.vertical, 10)
+                    HomeStatsView(showPortfolio: $showPortfolio)
+                    SearchBarView(searchText: $vm.searchText)
+                    HStack{
+                        if showPortfolio{
+                            Button(action: {
+                                showPortfolioView.toggle()
+                            }, label: {
+                                Text("Add new portfolio")
+                                    .font(.headline)
+                                    .foregroundColor(Color.theme.blue)
+                            })
+                        }
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(EdgeInsets(top: 0, leading: 10, bottom: 10, trailing: 0))
+                    columnTitles
                     portfolioCoinList
                         .transition(.move(edge: .trailing))
+                    
+                } else if showHome || !showNews{
+                    Text("Live crypto price")
+                        .font(.headline)
+                        .foregroundColor(Color.theme.accent)
+                        .fontWeight(.bold)
+                        .padding(.vertical, 10)
+                    HomeStatsView(showPortfolio: $showPortfolio)
+                    SearchBarView(searchText: $vm.searchText)
+                    columnTitles
+                    allCoinList
+                        .transition(.move(edge: .leading))
+                } else if showNews {
+                    Text("Crypto news")
+                        .font(.headline)
+                        .foregroundColor(Color.theme.accent)
+                        .fontWeight(.bold)
+                        .padding(.vertical, 10)
+                    NewsView()
                 }
-                
+                        
                 Spacer(minLength: 0)
+                navigationBar
             }
             .sheet(isPresented: $showSettingView, content: {
                 SettingView()
@@ -73,6 +107,47 @@ struct HomeView_Previews: PreviewProvider {
 }
 
 extension HomeView{
+    
+    private var navigationBar: some View{
+        HStack{
+            NavigationButtonView(iconName: "chart.bar")
+                .animation(.none)
+                .onTapGesture {
+//                    if showPortfolio{
+//                        showPortfolioView.toggle()
+//                    } else {
+//                        showSettingView.toggle()
+//                    }
+                    showHome = true
+                    if showHome{
+                        showPortfolio = false
+                        showNews = false
+                    }
+                }
+            Spacer()
+            NavigationButtonView(iconName: "bitcoinsign.circle")
+                .animation(.none)
+                .onTapGesture {
+                    showPortfolio = true
+                    if showPortfolio{
+                        showHome = false
+                        showNews = false
+                    }
+                }
+            Spacer()
+            NavigationButtonView(iconName: "newspaper")
+                .animation(.none)
+                .onTapGesture {
+                    showNews = true
+                    if showNews {
+                        showHome = false
+                        showPortfolio = false
+                    }
+                }
+        }
+        .padding(.horizontal, 40)
+    }
+    
     private var homeHeader: some View{
         HStack{
             CircleButtonView(iconName: showPortfolio ? "plus" : "info")

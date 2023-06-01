@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:">
+      location = "self:/Users/tegarmarino/Documents/CryptoTrackerV1/CryptoBull.xcodeproj">
    </FileRef>
 </Workspace>
