@@ -239,6 +239,7 @@ struct CoinModel : Identifiable, Codable{
         case id, symbol, name, image
         case currentPrice = "current_price"
         case marketCap = "market_cap"
+        
         case marketCapRank = "market_cap_rank"
         case fullyDilutedValuation = "fully_diluted_valuation"
         case totalVolume = "total_volume"
