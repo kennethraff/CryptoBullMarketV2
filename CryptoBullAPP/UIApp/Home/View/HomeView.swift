@@ -71,11 +71,6 @@ struct HomeView: View {
                     allCoinList
                         .transition(.move(edge: .leading))
                 } else if showNews {
-                    Text("Crypto news")
-                        .font(.headline)
-                        .foregroundColor(Color.theme.accent)
-                        .fontWeight(.bold)
-                        .padding(.vertical, 10)
                     NewsView()
                 }
                         
@@ -110,42 +105,50 @@ extension HomeView{
     
     private var navigationBar: some View{
         HStack{
-            NavigationButtonView(iconName: "chart.bar")
-                .animation(.none)
-                .onTapGesture {
-//                    if showPortfolio{
-//                        showPortfolioView.toggle()
-//                    } else {
-//                        showSettingView.toggle()
-//                    }
-                    showHome = true
-                    if showHome{
-                        showPortfolio = false
-                        showNews = false
+            VStack{
+                NavigationButtonView(iconName: "chart.bar")
+                    .animation(.none)
+                    .onTapGesture {
+                        showHome = true
+                        if showHome{
+                            showPortfolio = false
+                            showNews = false
+                        }
                     }
-                }
+                Text("Price")
+                    .font(.system(size: 10))
+            }
             Spacer()
-            NavigationButtonView(iconName: "bitcoinsign.circle")
-                .animation(.none)
-                .onTapGesture {
-                    showPortfolio = true
-                    if showPortfolio{
-                        showHome = false
-                        showNews = false
+            VStack{
+                NavigationButtonView(iconName: "bitcoinsign.circle")
+                    .animation(.none)
+                    .onTapGesture {
+                        showPortfolio = true
+                        if showPortfolio{
+                            showHome = false
+                            showNews = false
+                        }
                     }
-                }
+                Text("Portfolio")
+                    .font(.system(size: 10))
+            }
             Spacer()
-            NavigationButtonView(iconName: "newspaper")
-                .animation(.none)
-                .onTapGesture {
-                    showNews = true
-                    if showNews {
-                        showHome = false
-                        showPortfolio = false
+            VStack{
+                NavigationButtonView(iconName: "newspaper")
+                    .animation(.none)
+                    .onTapGesture {
+                        showNews = true
+                        if showNews {
+                            showHome = false
+                            showPortfolio = false
+                        }
                     }
-                }
+                Text("News")
+                    .font(.system(size: 10))
+            }
         }
         .padding(.horizontal, 40)
+        .padding(.top, 30)
     }
     
     private var homeHeader: some View{

@@ -18,7 +18,7 @@ struct SearchBarView: View {
                     searchText.isEmpty ? Color.theme.secondaryText : Color.theme.accent
                 )
             
-            TextField("Search by name or symbol...", text: $searchText)
+            TextField("Search by name like bitcoin or something", text: $searchText)
                 .foregroundColor(Color.theme.accent)
                 .overlay(
                     Image(systemName: "xmark.circle.fill")

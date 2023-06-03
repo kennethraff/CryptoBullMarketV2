@@ -15,7 +15,7 @@ struct NavigationButtonView: View {
         Image(systemName: iconName)
             .font(.headline)
             .foregroundColor(Color.theme.accent)
-            .frame(width: 70, height: 70)
+            .frame(width: 70, height: 20)
     }
 }
 
