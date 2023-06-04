@@ -31,6 +31,7 @@ struct HomeView: View {
                 })
              
 //            Content layer
+            
             VStack {
     // homeHeader
                         
