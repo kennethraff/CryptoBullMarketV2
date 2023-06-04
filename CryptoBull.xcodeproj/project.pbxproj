@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04D30E462A2C4D1D00E176E6 /* MacCryptoBullApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D30E452A2C4D1D00E176E6 /* MacCryptoBullApp.swift */; };
+		04D30E482A2C4D1D00E176E6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D30E472A2C4D1D00E176E6 /* ContentView.swift */; };
+		04D30E4A2A2C4D1F00E176E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04D30E492A2C4D1F00E176E6 /* Assets.xcassets */; };
+		04D30E4D2A2C4D1F00E176E6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04D30E4C2A2C4D1F00E176E6 /* Preview Assets.xcassets */; };
+		04D30E4F2A2C4D1F00E176E6 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D30E4E2A2C4D1F00E176E6 /* Persistence.swift */; };
+		04D30E522A2C4D1F00E176E6 /* MacCryptoBull.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04D30E502A2C4D1F00E176E6 /* MacCryptoBull.xcdatamodeld */; };
+		04D30E5D2A2C4D2000E176E6 /* MacCryptoBullTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D30E5C2A2C4D2000E176E6 /* MacCryptoBullTests.swift */; };
+		04D30E672A2C4D2000E176E6 /* MacCryptoBullUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D30E662A2C4D2000E176E6 /* MacCryptoBullUITests.swift */; };
+		04D30E692A2C4D2000E176E6 /* MacCryptoBullUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D30E682A2C4D2000E176E6 /* MacCryptoBullUITestsLaunchTests.swift */; };
 		9B1B644E2A22F90C00D39C4D /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1B644D2A22F90C00D39C4D /* DetailView.swift */; };
 		9B1B64502A2304D700D39C4D /* CoinDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1B644F2A2304D700D39C4D /* CoinDetailModel.swift */; };
 		9B1B64522A230B8600D39C4D /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1B64512A230B8600D39C4D /* DetailViewModel.swift */; };
@@ -57,7 +66,37 @@
 		9BF638012A20904A00F13CC5 /* CoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF638002A20904A00F13CC5 /* CoinModel.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		04D30E592A2C4D2000E176E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BF637D22A20801900F13CC5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04D30E422A2C4D1D00E176E6;
+			remoteInfo = MacCryptoBull;
+		};
+		04D30E632A2C4D2000E176E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BF637D22A20801900F13CC5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04D30E422A2C4D1D00E176E6;
+			remoteInfo = MacCryptoBull;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		04D30E432A2C4D1D00E176E6 /* MacCryptoBull.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacCryptoBull.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		04D30E452A2C4D1D00E176E6 /* MacCryptoBullApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacCryptoBullApp.swift; sourceTree = "<group>"; };
+		04D30E472A2C4D1D00E176E6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		04D30E492A2C4D1F00E176E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04D30E4C2A2C4D1F00E176E6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		04D30E4E2A2C4D1F00E176E6 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		04D30E512A2C4D1F00E176E6 /* MacCryptoBull.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MacCryptoBull.xcdatamodel; sourceTree = "<group>"; };
+		04D30E532A2C4D1F00E176E6 /* MacCryptoBull.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacCryptoBull.entitlements; sourceTree = "<group>"; };
+		04D30E582A2C4D1F00E176E6 /* MacCryptoBullTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacCryptoBullTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04D30E5C2A2C4D2000E176E6 /* MacCryptoBullTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacCryptoBullTests.swift; sourceTree = "<group>"; };
+		04D30E622A2C4D2000E176E6 /* MacCryptoBullUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacCryptoBullUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04D30E662A2C4D2000E176E6 /* MacCryptoBullUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacCryptoBullUITests.swift; sourceTree = "<group>"; };
+		04D30E682A2C4D2000E176E6 /* MacCryptoBullUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacCryptoBullUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9B1B644D2A22F90C00D39C4D /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		9B1B644F2A2304D700D39C4D /* CoinDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailModel.swift; sourceTree = "<group>"; };
 		9B1B64512A230B8600D39C4D /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
@@ -110,6 +149,27 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		04D30E402A2C4D1D00E176E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04D30E552A2C4D1F00E176E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04D30E5F2A2C4D2000E176E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9BF637D72A20801A00F13CC5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -120,6 +180,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04D30E442A2C4D1D00E176E6 /* MacCryptoBull */ = {
+			isa = PBXGroup;
+			children = (
+				04D30E452A2C4D1D00E176E6 /* MacCryptoBullApp.swift */,
+				04D30E472A2C4D1D00E176E6 /* ContentView.swift */,
+				04D30E492A2C4D1F00E176E6 /* Assets.xcassets */,
+				04D30E4E2A2C4D1F00E176E6 /* Persistence.swift */,
+				04D30E532A2C4D1F00E176E6 /* MacCryptoBull.entitlements */,
+				04D30E502A2C4D1F00E176E6 /* MacCryptoBull.xcdatamodeld */,
+				04D30E4B2A2C4D1F00E176E6 /* Preview Content */,
+			);
+			path = MacCryptoBull;
+			sourceTree = "<group>";
+		};
+		04D30E4B2A2C4D1F00E176E6 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				04D30E4C2A2C4D1F00E176E6 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		04D30E5B2A2C4D2000E176E6 /* MacCryptoBullTests */ = {
+			isa = PBXGroup;
+			children = (
+				04D30E5C2A2C4D2000E176E6 /* MacCryptoBullTests.swift */,
+			);
+			path = MacCryptoBullTests;
+			sourceTree = "<group>";
+		};
+		04D30E652A2C4D2000E176E6 /* MacCryptoBullUITests */ = {
+			isa = PBXGroup;
+			children = (
+				04D30E662A2C4D2000E176E6 /* MacCryptoBullUITests.swift */,
+				04D30E682A2C4D2000E176E6 /* MacCryptoBullUITestsLaunchTests.swift */,
+			);
+			path = MacCryptoBullUITests;
+			sourceTree = "<group>";
+		};
 		9B1B644A2A22F8D200D39C4D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -289,6 +388,9 @@
 			isa = PBXGroup;
 			children = (
 				9BF637DC2A20801A00F13CC5 /* CryptoBullAPP */,
+				04D30E442A2C4D1D00E176E6 /* MacCryptoBull */,
+				04D30E5B2A2C4D2000E176E6 /* MacCryptoBullTests */,
+				04D30E652A2C4D2000E176E6 /* MacCryptoBullUITests */,
 				9BF637DB2A20801A00F13CC5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -297,6 +399,9 @@
 			isa = PBXGroup;
 			children = (
 				9BF637DA2A20801A00F13CC5 /* Crypto Bull.app */,
+				04D30E432A2C4D1D00E176E6 /* MacCryptoBull.app */,
+				04D30E582A2C4D1F00E176E6 /* MacCryptoBullTests.xctest */,
+				04D30E622A2C4D2000E176E6 /* MacCryptoBullUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -378,6 +483,59 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		04D30E422A2C4D1D00E176E6 /* MacCryptoBull */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04D30E702A2C4D2000E176E6 /* Build configuration list for PBXNativeTarget "MacCryptoBull" */;
+			buildPhases = (
+				04D30E3F2A2C4D1D00E176E6 /* Sources */,
+				04D30E402A2C4D1D00E176E6 /* Frameworks */,
+				04D30E412A2C4D1D00E176E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MacCryptoBull;
+			productName = MacCryptoBull;
+			productReference = 04D30E432A2C4D1D00E176E6 /* MacCryptoBull.app */;
+			productType = "com.apple.product-type.application";
+		};
+		04D30E572A2C4D1F00E176E6 /* MacCryptoBullTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04D30E712A2C4D2000E176E6 /* Build configuration list for PBXNativeTarget "MacCryptoBullTests" */;
+			buildPhases = (
+				04D30E542A2C4D1F00E176E6 /* Sources */,
+				04D30E552A2C4D1F00E176E6 /* Frameworks */,
+				04D30E562A2C4D1F00E176E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04D30E5A2A2C4D2000E176E6 /* PBXTargetDependency */,
+			);
+			name = MacCryptoBullTests;
+			productName = MacCryptoBullTests;
+			productReference = 04D30E582A2C4D1F00E176E6 /* MacCryptoBullTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		04D30E612A2C4D2000E176E6 /* MacCryptoBullUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04D30E722A2C4D2000E176E6 /* Build configuration list for PBXNativeTarget "MacCryptoBullUITests" */;
+			buildPhases = (
+				04D30E5E2A2C4D2000E176E6 /* Sources */,
+				04D30E5F2A2C4D2000E176E6 /* Frameworks */,
+				04D30E602A2C4D2000E176E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04D30E642A2C4D2000E176E6 /* PBXTargetDependency */,
+			);
+			name = MacCryptoBullUITests;
+			productName = MacCryptoBullUITests;
+			productReference = 04D30E622A2C4D2000E176E6 /* MacCryptoBullUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		9BF637D92A20801A00F13CC5 /* Crypto Bull */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9BF637E82A20801C00F13CC5 /* Build configuration list for PBXNativeTarget "Crypto Bull" */;
@@ -402,9 +560,20 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1420;
+				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
+					04D30E422A2C4D1D00E176E6 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					04D30E572A2C4D1F00E176E6 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 04D30E422A2C4D1D00E176E6;
+					};
+					04D30E612A2C4D2000E176E6 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 04D30E422A2C4D1D00E176E6;
+					};
 					9BF637D92A20801A00F13CC5 = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -424,11 +593,37 @@
 			projectRoot = "";
 			targets = (
 				9BF637D92A20801A00F13CC5 /* Crypto Bull */,
+				04D30E422A2C4D1D00E176E6 /* MacCryptoBull */,
+				04D30E572A2C4D1F00E176E6 /* MacCryptoBullTests */,
+				04D30E612A2C4D2000E176E6 /* MacCryptoBullUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		04D30E412A2C4D1D00E176E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04D30E4D2A2C4D1F00E176E6 /* Preview Assets.xcassets in Resources */,
+				04D30E4A2A2C4D1F00E176E6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04D30E562A2C4D1F00E176E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04D30E602A2C4D2000E176E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9BF637D82A20801A00F13CC5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -441,6 +636,34 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		04D30E3F2A2C4D1D00E176E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04D30E4F2A2C4D1F00E176E6 /* Persistence.swift in Sources */,
+				04D30E482A2C4D1D00E176E6 /* ContentView.swift in Sources */,
+				04D30E462A2C4D1D00E176E6 /* MacCryptoBullApp.swift in Sources */,
+				04D30E522A2C4D1F00E176E6 /* MacCryptoBull.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04D30E542A2C4D1F00E176E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04D30E5D2A2C4D2000E176E6 /* MacCryptoBullTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04D30E5E2A2C4D2000E176E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04D30E692A2C4D2000E176E6 /* MacCryptoBullUITestsLaunchTests.swift in Sources */,
+				04D30E672A2C4D2000E176E6 /* MacCryptoBullUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9BF637D62A20801A00F13CC5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -496,7 +719,156 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		04D30E5A2A2C4D2000E176E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04D30E422A2C4D1D00E176E6 /* MacCryptoBull */;
+			targetProxy = 04D30E592A2C4D2000E176E6 /* PBXContainerItemProxy */;
+		};
+		04D30E642A2C4D2000E176E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04D30E422A2C4D1D00E176E6 /* MacCryptoBull */;
+			targetProxy = 04D30E632A2C4D2000E176E6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		04D30E6A2A2C4D2000E176E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MacCryptoBull/MacCryptoBull.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MacCryptoBull/Preview Content\"";
+				DEVELOPMENT_TEAM = 7Q442Z6DZ6;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = UCiputra.MacCryptoBull;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		04D30E6B2A2C4D2000E176E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MacCryptoBull/MacCryptoBull.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MacCryptoBull/Preview Content\"";
+				DEVELOPMENT_TEAM = 7Q442Z6DZ6;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = UCiputra.MacCryptoBull;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		04D30E6C2A2C4D2000E176E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7Q442Z6DZ6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = UCiputra.MacCryptoBullTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MacCryptoBull.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MacCryptoBull";
+			};
+			name = Debug;
+		};
+		04D30E6D2A2C4D2000E176E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7Q442Z6DZ6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = UCiputra.MacCryptoBullTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MacCryptoBull.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MacCryptoBull";
+			};
+			name = Release;
+		};
+		04D30E6E2A2C4D2000E176E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7Q442Z6DZ6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = UCiputra.MacCryptoBullUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = MacCryptoBull;
+			};
+			name = Debug;
+		};
+		04D30E6F2A2C4D2000E176E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7Q442Z6DZ6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = UCiputra.MacCryptoBullUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = MacCryptoBull;
+			};
+			name = Release;
+		};
 		9BF637E62A20801C00F13CC5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -676,6 +1048,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		04D30E702A2C4D2000E176E6 /* Build configuration list for PBXNativeTarget "MacCryptoBull" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04D30E6A2A2C4D2000E176E6 /* Debug */,
+				04D30E6B2A2C4D2000E176E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04D30E712A2C4D2000E176E6 /* Build configuration list for PBXNativeTarget "MacCryptoBullTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04D30E6C2A2C4D2000E176E6 /* Debug */,
+				04D30E6D2A2C4D2000E176E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04D30E722A2C4D2000E176E6 /* Build configuration list for PBXNativeTarget "MacCryptoBullUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04D30E6E2A2C4D2000E176E6 /* Debug */,
+				04D30E6F2A2C4D2000E176E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9BF637D52A20801A00F13CC5 /* Build configuration list for PBXProject "CryptoBull" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -697,6 +1096,16 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
+		04D30E502A2C4D1F00E176E6 /* MacCryptoBull.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				04D30E512A2C4D1F00E176E6 /* MacCryptoBull.xcdatamodel */,
+			);
+			currentVersion = 04D30E512A2C4D1F00E176E6 /* MacCryptoBull.xcdatamodel */;
+			path = MacCryptoBull.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		9B8D67B92A223E0200862EFE /* PortfolioContainer.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (

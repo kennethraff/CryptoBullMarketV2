@@ -10,7 +10,7 @@ import SafariServices
 
 struct NewsView: View {
     @StateObject var viewModel = NewsViewModel()
-    @State private var keyword = "bitcoin"
+    @State private var keyword = "Bitcoin"
     
     var body: some View {
         NavigationView {
