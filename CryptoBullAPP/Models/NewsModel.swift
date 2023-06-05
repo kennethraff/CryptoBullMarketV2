@@ -30,7 +30,7 @@ struct NewsAPIResponse: Codable {
 }
 
 struct NewsModel: Codable, Identifiable {
-    let id = UUID()
+    var id = UUID()
     let title: String
     let description: String
     let url: String

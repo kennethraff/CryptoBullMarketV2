@@ -9,8 +9,7 @@ import Foundation
 import SwiftUI
 import Combine
 
-class CoinImageService{
-    
+class CoinImageService {
     @Published var image: UIImage? = nil
     private var imageSubscription: AnyCancellable?
     private let coin: CoinModel
@@ -18,13 +17,13 @@ class CoinImageService{
     private let folderName = "coin_images"
     private let imageName: String
     
-    init(coin: CoinModel){
+    init(coin: CoinModel) {
         self.coin = coin
         self.imageName = coin.id
         getCoinImage()
     }
     
-    private func getCoinImage(){
+    private func getCoinImage() {
         if let savedImage = fileManager.getImage(imageName: imageName, folderName: folderName) {
             image = savedImage
             print("Retrieved image from file manager")
@@ -34,7 +33,7 @@ class CoinImageService{
         }
     }
     
-    private func downloadCoinImage(){
+    private func downloadCoinImage() {
         guard let url = URL(string: coin.image) else {return}
         
         imageSubscription = NetworkingManager.donwload(url: url)
