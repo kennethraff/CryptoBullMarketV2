@@ -12,7 +12,7 @@ struct CoinLogoView: View {
     let coin: CoinModel
     
     var body: some View {
-        VStack{
+        VStack {
             CoinImageView(coin: coin)
                 .frame(width: 50, height: 50)
             Text(coin.symbol.uppercased())
@@ -32,7 +32,7 @@ struct CoinLogoView: View {
 
 struct CoinLogoView_Previews: PreviewProvider {
     static var previews: some View {
-        Group{
+        Group {
             CoinLogoView(coin: dev.coin)
                 .previewLayout(.sizeThatFits)
                 .preferredColorScheme(.dark)

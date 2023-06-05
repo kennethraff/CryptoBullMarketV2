@@ -8,16 +8,15 @@
 import Foundation
 import Combine
 
-class CoinDataService{
-    
+class CoinDataService {
     @Published var allCoin: [CoinModel] = []
     var coinSubscription: AnyCancellable?
     
-    init(){
+    init() {
         getCoins()
     }
     
-    func getCoins(){
+    func getCoins() {
         guard let url = URL(string: "https://api.coingecko.com/api/v3/coins/markets?vs_currency=idr&order=market_cap_desc&per_page=250&page=1&sparkline=true&price_change_percentage=1h&locale=en") else {return}
         
         coinSubscription = NetworkingManager.donwload(url: url)

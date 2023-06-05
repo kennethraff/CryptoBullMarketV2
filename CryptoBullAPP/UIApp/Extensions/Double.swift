@@ -7,9 +7,8 @@
 
 import Foundation
 
-extension Double{
-    
-    private var currencyFormatter2: NumberFormatter{
+extension Double {
+    private var currencyFormatter2: NumberFormatter {
         let formatter = NumberFormatter()
         formatter.usesGroupingSeparator = true
         formatter.numberStyle = .currency
@@ -21,13 +20,13 @@ extension Double{
         return formatter
     }
     
-    func asCurrencyWith2Decimals() -> String{
+    func asCurrencyWith2Decimals() -> String {
         let number = NSNumber(value: self)
         return currencyFormatter6.string(from: number) ?? "Rp0.00"
     }
     
     
-    private var currencyFormatter6: NumberFormatter{
+    private var currencyFormatter6: NumberFormatter {
         let formatter = NumberFormatter()
         formatter.usesGroupingSeparator = true
         formatter.numberStyle = .currency
@@ -39,7 +38,7 @@ extension Double{
         return formatter
     }
     
-    func asCurrencyWith6Decimals() -> String{
+    func asCurrencyWith6Decimals() -> String {
         let number = NSNumber(value: self)
         return currencyFormatter6.string(from: number) ?? "Rp0.00"
     }
@@ -56,26 +55,26 @@ extension Double{
         let num = abs (Double (self))
         let sign = (self < 0) ? "_" :""
         switch num {
-        case 1_000_000_000_000...:
-            let formatted = num / 1_000_000_000_000
-            let stringFormatted = formatted.asNumberString()
-            return "\(sign)\(stringFormatted)T"
-        case 1_000_000_000...:
-            let formatted = num / 1_000_000_000
-            let stringFormatted = formatted.asNumberString()
-            return "\(sign)\(stringFormatted)M"
-        case 1_000_000...:
-            let formatted = num / 1_000_000
-            let stringFormatted = formatted.asNumberString()
-            return "\(sign)\(stringFormatted)J"
-        case 1_000...:
-            let formatted = num / 1_000
-            let stringFormatted = formatted.asNumberString()
-            return "\(sign)\(stringFormatted)K"
-        case 0...:
-            return self.asNumberString()
-        default:
-            return "\(sign)\(self)"
+            case 1_000_000_000_000...:
+                let formatted = num / 1_000_000_000_000
+                let stringFormatted = formatted.asNumberString()
+                return "\(sign)\(stringFormatted)T"
+            case 1_000_000_000...:
+                let formatted = num / 1_000_000_000
+                let stringFormatted = formatted.asNumberString()
+                return "\(sign)\(stringFormatted)M"
+            case 1_000_000...:
+                let formatted = num / 1_000_000
+                let stringFormatted = formatted.asNumberString()
+                return "\(sign)\(stringFormatted)J"
+            case 1_000...:
+                let formatted = num / 1_000
+                let stringFormatted = formatted.asNumberString()
+                return "\(sign)\(stringFormatted)K"
+            case 0...:
+                return self.asNumberString()
+            default:
+                return "\(sign)\(self)"
         }
     }
     

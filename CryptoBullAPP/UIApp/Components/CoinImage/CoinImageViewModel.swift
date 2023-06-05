@@ -9,8 +9,7 @@ import Foundation
 import SwiftUI
 import Combine
 
-class CoinImageViewModel: ObservableObject{
-    
+class CoinImageViewModel: ObservableObject {
     @Published var image: UIImage? = nil
     @Published var isLoading: Bool = false
     
@@ -25,7 +24,7 @@ class CoinImageViewModel: ObservableObject{
         self.isLoading = true
     }
     
-    private func addSubscribers(){
+    private func addSubscribers() {
         
         dataService.$image
             .sink { [weak self] (_) in

@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct CircleButtonView: View {
-    
     let iconName: String
     
     var body: some View {
@@ -28,7 +27,7 @@ struct CircleButtonView: View {
 
 struct CircleButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        Group{
+        Group {
             CircleButtonView(iconName: "Info")
                 .previewLayout(.sizeThatFits)
             

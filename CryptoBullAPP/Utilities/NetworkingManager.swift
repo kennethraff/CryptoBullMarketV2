@@ -8,21 +8,20 @@
 import Foundation
 import Combine
 
-class NetworkingManager{
-    
-    enum NetworkingError: LocalizedError{
+class NetworkingManager {
+    enum NetworkingError: LocalizedError {
         case badURLResponse(url: URL)
         case unknown
         
         var errorDescription: String? {
-            switch self{
-            case .badURLResponse(url: let url): return "[🔥]Bad Response From URL: \(url)"
-            case .unknown: return "[⚠️]Unkwon Error Occured"
+            switch self {
+                case .badURLResponse(url: let url): return "[🔥]Bad Response From URL: \(url)"
+                case .unknown: return "[⚠️]Unkwon Error Occured"
             }
         }
     }
     
-    static func donwload(url: URL) -> AnyPublisher<Data, any Error>{
+    static func donwload(url: URL) -> AnyPublisher<Data, any Error> {
         return URLSession.shared.dataTaskPublisher(for: url)
             .subscribe(on: DispatchQueue.global(qos: .default))
             .tryMap({ try handleURLResponse(output: $0, url: url) })
@@ -38,12 +37,12 @@ class NetworkingManager{
         return output.data
     }
     
-    static func handleCompletion(completion: Subscribers.Completion<Error>){
+    static func handleCompletion(completion: Subscribers.Completion<Error>) {
         switch completion {
-        case .finished:
-            break
-        case .failure(let error):
-            print(error.localizedDescription)
+            case .finished:
+                break
+            case .failure(let error):
+                print(error.localizedDescription)
         }
     }
 }
