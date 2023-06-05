@@ -11,8 +11,8 @@ struct SettingView: View {
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
-        NavigationView{
-            Text("Create by Tegar marino")
+        NavigationView {
+            Text("Settings Page")
             .listStyle(GroupedListStyle())
             .navigationTitle("Settings")
             .toolbar{

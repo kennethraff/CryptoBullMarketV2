@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct NavigationButtonView: View {
-    
     let iconName: String
     
     var body: some View {

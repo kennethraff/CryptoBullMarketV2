@@ -9,14 +9,12 @@ import Foundation
 import Combine
 
 class HomeViewModel : ObservableObject {
-    
     @Published var statistics : [StatisticModel] = []
     @Published var allCoins: [CoinModel] = []
     @Published var portfolioCoins: [CoinModel] = []
     @Published var isLoading: Bool = false
     @Published var searchText: String = ""
     @Published var sortOption: SortOption = .holdings
-    
     
     private let coinDataService = CoinDataService()
     private let marketDataService = MarketDataService()
@@ -31,10 +29,8 @@ class HomeViewModel : ObservableObject {
         addSubsribers()
     }
     
-    
-    func addSubsribers(){
-    
-//        Update allCoins
+    func addSubsribers() {
+        //Update allCoins
         $searchText
             .combineLatest(coinDataService.$allCoin, $sortOption)
             .debounce(for: .seconds(0.5), scheduler: DispatchQueue.main)
@@ -44,17 +40,17 @@ class HomeViewModel : ObservableObject {
             }
             .store(in: &cancellables)
         
-//        Update portfolioCoins
-            $allCoins
-                .combineLatest(portfolioDataService.$savedEntity )
-                .map(mapAllCoinsToPortfolioCoins)
-                .sink { [weak self] (returnedCoins) in
-                    guard let self = self else { return }
-                    self.portfolioCoins = self.sortPortfolioCoinsIfNeeded(coins: returnedCoins)
-                }
-                .store(in: &cancellables)
+        // Update portfolioCoins
+        $allCoins
+            .combineLatest(portfolioDataService.$savedEntity)
+            .map(mapAllCoinsToPortfolioCoins)
+            .sink { [weak self] (returnedCoins) in
+                guard let self = self else { return }
+                self.portfolioCoins = self.sortPortfolioCoinsIfNeeded(coins: returnedCoins)
+            }
+            .store(in: &cancellables)
         
-//        Update market data
+        // Update market data
         marketDataService.$marketData
             .combineLatest($portfolioCoins)
             .map(mapGlobalMarketData)
@@ -63,29 +59,27 @@ class HomeViewModel : ObservableObject {
                 self?.isLoading = false
             }
             .store(in: &cancellables)
-        
-
     }
     
-    func updatePortfolio(coin : CoinModel, amount: Double){
+    func updatePortfolio(coin : CoinModel, amount: Double) {
         portfolioDataService.updatePortfolio(coin: coin, amount: amount)
     }
     
-    func reloadData(){
+    func reloadData() {
         isLoading = true
         coinDataService.getCoins()
         marketDataService.getData()
         HapticManager.notification(type: .success)
     }
     
-    private func filterAndSortCoins(text:String, coins: [CoinModel], sort: SortOption) -> [CoinModel]{
+    private func filterAndSortCoins(text:String, coins: [CoinModel], sort: SortOption) -> [CoinModel] {
         var updateCoins = filterCoins(text: text, coins: coins)
-//        sort
+        // Sort cryptocoins
         sortCoins(sort: sort, coins: &updateCoins)
         return updateCoins
     }
     
-    private func filterCoins(text:String, coins: [CoinModel]) -> [CoinModel]{
+    private func filterCoins(text:String, coins: [CoinModel]) -> [CoinModel] {
         guard !text.isEmpty else {
             return coins
         }
@@ -97,34 +91,32 @@ class HomeViewModel : ObservableObject {
         }
     }
      
-    private func sortCoins(sort: SortOption, coins: inout [CoinModel]){
-        switch sort{
-        case .rank, .holdings:
-            coins.sort(by: {$0.rank < $1.rank})
-//            return coins.sorted { (coin1, coin2) -> Bool in
-//                return coin1.rank < coin2.rank
-        case .rankReversed, .holdingReversed:
-            coins.sort(by: {$0.rank > $1.rank})
-        case .price:
-            coins.sort(by: {$0.currentPrice > $1.currentPrice})
-        case .priceReversed:
-            coins.sort(by: {$0.currentPrice < $1.currentPrice})
+    private func sortCoins(sort: SortOption, coins: inout [CoinModel]) {
+        switch sort {
+            case .rank, .holdings:
+                coins.sort(by: {$0.rank < $1.rank})
+            case .rankReversed, .holdingReversed:
+                coins.sort(by: {$0.rank > $1.rank})
+            case .price:
+                coins.sort(by: {$0.currentPrice > $1.currentPrice})
+            case .priceReversed:
+                coins.sort(by: {$0.currentPrice < $1.currentPrice})
         }
     }
     
-    private func sortPortfolioCoinsIfNeeded(coins: [CoinModel]) -> [CoinModel]{
-//        Will only sort by holdings or reversedHoldings if needed
-        switch sortOption{
-        case .holdings:
-            return coins.sorted(by: {$0.currentHoldingsValue > $1.currentHoldingsValue})
-        case .holdingReversed:
-            return coins.sorted(by: {$0.currentHoldingsValue < $1.currentHoldingsValue})
-        default:
-            return coins
+    private func sortPortfolioCoinsIfNeeded(coins: [CoinModel]) -> [CoinModel] {
+        // Will only sort by holdings or reversedHoldings if needed
+        switch sortOption {
+            case .holdings:
+                return coins.sorted(by: {$0.currentHoldingsValue > $1.currentHoldingsValue})
+            case .holdingReversed:
+                return coins.sorted(by: {$0.currentHoldingsValue < $1.currentHoldingsValue})
+            default:
+                return coins
         }
     }
     
-    private func mapAllCoinsToPortfolioCoins(allCoins: [CoinModel], porfolioEntities: [PortfolioEntity]) -> [CoinModel]{
+    private func mapAllCoinsToPortfolioCoins(allCoins: [CoinModel], porfolioEntities: [PortfolioEntity]) -> [CoinModel] {
         allCoins
             .compactMap { (coin) -> CoinModel? in
                 guard let entity = porfolioEntities.first(where: { $0.coinID == coin.id }) else {
@@ -134,7 +126,7 @@ class HomeViewModel : ObservableObject {
             }
     }
     
-    private func mapGlobalMarketData(marketDataModel: MarketDataModel?, portfolioCoins: [CoinModel]) -> [StatisticModel ]{
+    private func mapGlobalMarketData(marketDataModel: MarketDataModel?, portfolioCoins: [CoinModel]) -> [StatisticModel] {
         var stats: [StatisticModel] = []
         
         guard let data = marketDataModel else {
@@ -156,9 +148,7 @@ class HomeViewModel : ObservableObject {
                 let currentValue = coin.currentHoldingsValue
                 let percentageChange = coin.priceChangePercentage24H ?? 0 / 100
                 let previousValue = currentValue / (1 + percentageChange)
-                return previousValue
-//                25% -> 25 -> 0.25
-            }
+                return previousValue            }
             .reduce(0, +)
         
         let percentageChange = ((portfolioValue - previousValue) / previousValue) * 100

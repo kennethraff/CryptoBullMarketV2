@@ -20,7 +20,7 @@ struct DetailLoadingView: View {
 }
 
 struct DetailView: View {
-    @StateObject var vm: DetailViewModel
+    @StateObject var viewModel: DetailViewModel
     @State private var showFullDescription: Bool = false
     private let colums: [GridItem] = [
         GridItem(.flexible()),
@@ -28,17 +28,17 @@ struct DetailView: View {
     ]
     private let spacing: CGFloat = 30
     
-    init(coin: CoinModel){
-        _vm = StateObject(wrappedValue: DetailViewModel(coin: coin))
+    init(coin: CoinModel) {
+        _viewModel = StateObject(wrappedValue: DetailViewModel(coin: coin))
     }
     
     var body: some View {
-        ScrollView{
-            VStack{
-                ChartView(coin: vm.coin)
+        ScrollView {
+            VStack {
+                ChartView(coin: viewModel.coin)
                     .padding(.vertical)
                 
-                VStack(spacing: 20){
+                VStack(spacing: 20) {
                     overviewTitle
                     Divider()
                     descriptionSection
@@ -51,7 +51,7 @@ struct DetailView: View {
             }
             .padding()
         }
-        .navigationTitle(vm.coin.name)
+        .navigationTitle(viewModel.coin.name)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 navigationBarTrailingItems
@@ -68,19 +68,18 @@ struct DetailView_Previews: PreviewProvider {
     }
 }
 
-extension DetailView{
-    
-    private var navigationBarTrailingItems: some View{
+extension DetailView {
+    private var navigationBarTrailingItems: some View {
         HStack {
-            Text(vm.coin.symbol.uppercased())
+            Text(viewModel.coin.symbol.uppercased())
                 .font(.headline)
                 .foregroundColor(Color.theme.secondaryText)
-            CoinImageView(coin: vm.coin)
+            CoinImageView(coin: viewModel.coin)
                 .frame(width: 25, height: 25)
         }
     }
     
-    private var overviewTitle: some View{
+    private var overviewTitle: some View {
         Text("Overview")
             .font(.title)
             .bold()
@@ -88,7 +87,7 @@ extension DetailView{
             .frame(maxWidth: .infinity, alignment: .leading)
     }
     
-    private var additionalTitle: some View{
+    private var additionalTitle: some View {
         Text("Additional Details")
             .font(.title)
             .bold()
@@ -98,7 +97,7 @@ extension DetailView{
     
     private var descriptionSection: some View {
         ZStack {
-            if let coinDescription = vm.coinDescriptiion, !coinDescription.isEmpty {
+            if let coinDescription = viewModel.coinDescriptiion, !coinDescription.isEmpty {
                 VStack(alignment: .leading){
                     Text(coinDescription)
                         .lineLimit(showFullDescription ? nil : 3)
@@ -122,40 +121,40 @@ extension DetailView{
         }
     }
     
-    private var overviewGrid: some View{
+    private var overviewGrid: some View {
         LazyVGrid(
             columns: colums,
             alignment: .leading,
             spacing: spacing,
             pinnedViews: [],
             content: {
-                ForEach(vm.overviewStatistics) { stat in
+                ForEach(viewModel.overviewStatistics) { stat in
                     StatisticView(stat: stat)
                 }
             })
     }
     
-    private var additionalGrid: some View{
+    private var additionalGrid: some View {
         LazyVGrid(
             columns: colums,
             alignment: .leading,
             spacing: spacing,
             pinnedViews: [],
             content: {
-                ForEach(vm.additionalStatistics) {stat in
+                ForEach(viewModel.additionalStatistics) {stat in
                     StatisticView(stat: stat)
                 }
             })
     }
     
-    private var websiteSection: some View{
+    private var websiteSection: some View {
         VStack(alignment: .leading, spacing: 20){
-            if let websiteString = vm.websiteURL,
+            if let websiteString = viewModel.websiteURL,
                let url = URL(string: websiteString) {
                 Link("Website", destination: url)
             }
             
-            if let redditString = vm.redditURL,
+            if let redditString = viewModel.redditURL,
                let url = URL(string: redditString) {
                 Link("Reddit", destination: url)
             }

@@ -16,7 +16,7 @@ struct NewsView: View {
         NavigationView {
             VStack {
                 
-                HStack{
+                HStack {
                     Image(systemName: "magnifyingglass")
                         .foregroundColor(
                             keyword.isEmpty ? Color.theme.secondaryText : Color.theme.accent
@@ -25,21 +25,20 @@ struct NewsView: View {
                     TextField("Search by name like bitcoin or something", text: $keyword, onCommit: {
                         viewModel.fetchArticles(withKeyword: keyword)
                     })
-                        .foregroundColor(Color.theme.accent)
-                        .overlay(
-                            Image(systemName: "xmark.circle.fill")
-                                .padding()
-                                .offset(x: 10)
-                                .foregroundColor(Color.theme.accent)
-                                .opacity(keyword.isEmpty ? 0.0 : 1.0)
-                                .onTapGesture {
-                                    UIApplication.shared.endEditing()
-                                    keyword = ""
-                                }
-                            
-                            ,alignment: .trailing
-                        )
-                        .autocorrectionDisabled()
+                    .foregroundColor(Color.theme.accent)
+                    .overlay(
+                        Image(systemName: "xmark.circle.fill")
+                            .padding()
+                            .offset(x: 10)
+                            .foregroundColor(Color.theme.accent)
+                            .opacity(keyword.isEmpty ? 0.0 : 1.0)
+                            .onTapGesture {
+                                UIApplication.shared.endEditing()
+                                keyword = ""
+                            }
+                        ,alignment: .trailing
+                    )
+                    .autocorrectionDisabled()
                 }
                 .font(.headline)
                 .padding()

@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class DetailViewModel: ObservableObject{
+class DetailViewModel: ObservableObject {
     @Published var overviewStatistics: [StatisticModel] = []
     @Published var additionalStatistics: [StatisticModel] = []
     @Published var coinDescriptiion: String? = nil
@@ -19,14 +19,13 @@ class DetailViewModel: ObservableObject{
     private let coinDetailService: CoinDetailDataService
     private var cancelables = Set<AnyCancellable>()
     
-    // Initialice model
-    init(coin: CoinModel){
+    init(coin: CoinModel) {
         self.coin = coin
         self.coinDetailService = CoinDetailDataService(coin: coin)
         self.addSubscribers()
     }
     
-    private func addSubscribers(){
+    private func addSubscribers() {
         coinDetailService.$coinDetails
             .combineLatest($coin)
             .map(mapDataToStatistics)
