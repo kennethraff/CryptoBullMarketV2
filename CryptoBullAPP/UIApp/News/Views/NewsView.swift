@@ -52,15 +52,10 @@ struct NewsView: View {
                 )
                 .padding(.horizontal)
                 
+                // Show a list of articles
                 List(viewModel.articles) { article in
                     NavigationLink(destination: WebView(url: article.url)) {
                         VStack(alignment: .leading) {
-    //                        Text(article.title)
-    //                            .font(.headline)
-    //                        Text(article.description)
-    //                            .font(.subheadline)
-    //                        Text(article.publishedAt)
-    //                            .font(.caption)
                             HStack{
                                 Image(systemName: "clock")
                                     .padding(.leading)
@@ -85,7 +80,6 @@ struct NewsView: View {
                 }
                 .listStyle(PlainListStyle())
             }
-//            .navigationTitle("News")
             .toolbar {
                 ToolbarItem(placement: .principal) {
                     Text("Crypto News")
@@ -97,6 +91,7 @@ struct NewsView: View {
             }
         }
         .onAppear {
+            // Fetch articles relating to keyword
             viewModel.fetchArticles(withKeyword: keyword)
         }
     }
@@ -107,34 +102,3 @@ struct NewsView_Previews: PreviewProvider {
         NewsView()
     }
 }
-
-//extension NewsView{
-//    private var upperColumn: some View{
-//        VStack(alignment: .leading){
-//            HStack{
-//                Text("\(viewModel.title)")
-//                    .fontWeight(.light)
-//                    .foregroundColor(Color.theme.accent)
-//                Image(systemName: "clock")
-//                    .padding(.leading)
-//                    .foregroundColor(Color.theme.secondaryText)
-//                Text("\(viewModel.publishedAt)")
-//                    .fontWeight(.light)
-//            }
-//            .font(.system(size: 10))
-//
-//        }
-//        .padding(.horizontal)
-//    }
-//
-//    private var middleColumn: some View{
-//        HStack{
-//            Text("\(viewModel.title)")
-//                .font(.title)
-//                .foregroundColor(Color.theme.secondaryText)
-//                .frame(minWidth: 30)
-//                .fontWeight(.bold)
-//        }
-//        .padding(.horizontal)
-//    }
-//}

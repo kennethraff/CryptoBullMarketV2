@@ -7,8 +7,7 @@
 
 import SwiftUI
 
-struct DetailLoadingView: View{
-    
+struct DetailLoadingView: View {
     @Binding var coin: CoinModel?
     
     var body: some View {
@@ -21,7 +20,6 @@ struct DetailLoadingView: View{
 }
 
 struct DetailView: View {
-    
     @StateObject var vm: DetailViewModel
     @State private var showFullDescription: Bool = false
     private let colums: [GridItem] = [
