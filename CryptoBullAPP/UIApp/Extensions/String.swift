@@ -7,7 +7,8 @@
 
 import Foundation
 
-extension String {
+extension String{
+    
     var removingHTMLOccurences: String {
         return self.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
     }

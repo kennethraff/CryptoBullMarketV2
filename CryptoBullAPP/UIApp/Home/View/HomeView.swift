@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct HomeView: View {
-    @EnvironmentObject private var viewModel: HomeViewModel
+    
+    @EnvironmentObject private var vm: HomeViewModel
     @State private var showPortfolio: Bool = false // Animate right
     @State private var showPortfolioView: Bool = false // New sheet
     @State private var showSettingView: Bool = false // Setting
@@ -21,18 +22,17 @@ struct HomeView: View {
     
     var body: some View {
         ZStack{
-            // Background layer
+//            Background layer
             Color.theme.background
                 .ignoresSafeArea()
                 .sheet(isPresented: $showPortfolioView, content: {
                     PortfolioView()
-                        .environmentObject(viewModel)
+                        .environmentObject(vm)
                 })
              
-            // Content layer
-            
+//            Content layer
             VStack {
-//                homeHeader
+    // homeHeader
                         
                 if showPortfolio && !showHome {
                     Text("Portfolio")
@@ -41,9 +41,9 @@ struct HomeView: View {
                         .fontWeight(.bold)
                         .padding(.vertical, 10)
                     HomeStatsView(showPortfolio: $showPortfolio)
-                    SearchBarView(searchText: $viewModel.searchText)
+                    SearchBarView(searchText: $vm.searchText)
                     HStack{
-                        if showPortfolio {
+                        if showPortfolio{
                             Button(action: {
                                 showPortfolioView.toggle()
                             }, label: {
@@ -59,14 +59,14 @@ struct HomeView: View {
                     portfolioCoinList
                         .transition(.move(edge: .trailing))
                     
-                } else if showHome || !showNews {
+                } else if showHome || !showNews{
                     Text("Live crypto price")
                         .font(.headline)
                         .foregroundColor(Color.theme.accent)
                         .fontWeight(.bold)
                         .padding(.vertical, 10)
                     HomeStatsView(showPortfolio: $showPortfolio)
-                    SearchBarView(searchText: $viewModel.searchText)
+                    SearchBarView(searchText: $vm.searchText)
                     columnTitles
                     allCoinList
                         .transition(.move(edge: .leading))
@@ -82,7 +82,6 @@ struct HomeView: View {
             })
         }
         .background(
-            // init(destination:isActive:label:) was deprecated
             NavigationLink(
                 destination: DetailLoadingView(coin: $selectedCoin),
                 isActive: $showDetailView,
@@ -94,7 +93,7 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
+        NavigationView{
             HomeView()
                 .navigationBarHidden(true)
         }
@@ -102,17 +101,16 @@ struct HomeView_Previews: PreviewProvider {
     }
 }
 
-extension HomeView {
+extension HomeView{
     
-    private var navigationBar: some View {
-        HStack {
-            VStack {
+    private var navigationBar: some View{
+        HStack{
+            VStack{
                 NavigationButtonView(iconName: "chart.bar")
-                    // 'animation' was deprecated
                     .animation(.none)
                     .onTapGesture {
                         showHome = true
-                        if showHome {
+                        if showHome{
                             showPortfolio = false
                             showNews = false
                         }
@@ -121,13 +119,12 @@ extension HomeView {
                     .font(.system(size: 10))
             }
             Spacer()
-            VStack {
+            VStack{
                 NavigationButtonView(iconName: "bitcoinsign.circle")
-                    // 'animation' was deprecated
                     .animation(.none)
                     .onTapGesture {
                         showPortfolio = true
-                        if showPortfolio {
+                        if showPortfolio{
                             showHome = false
                             showNews = false
                         }
@@ -136,9 +133,8 @@ extension HomeView {
                     .font(.system(size: 10))
             }
             Spacer()
-            VStack {
+            VStack{
                 NavigationButtonView(iconName: "newspaper")
-                    // 'animation' was deprecated
                     .animation(.none)
                     .onTapGesture {
                         showNews = true
@@ -155,13 +151,12 @@ extension HomeView {
         .padding(.top, 30)
     }
     
-    private var homeHeader: some View {
-        HStack {
+    private var homeHeader: some View{
+        HStack{
             CircleButtonView(iconName: showPortfolio ? "plus" : "info")
-                // 'animation' was deprecated
                 .animation(.none)
                 .onTapGesture {
-                    if showPortfolio {
+                    if showPortfolio{
                         showPortfolioView.toggle()
                     } else {
                         showSettingView.toggle()
@@ -180,7 +175,7 @@ extension HomeView {
             CircleButtonView(iconName: "chevron.right")
                 .rotationEffect(Angle(degrees: showPortfolio ? 180 : 0))
                 .onTapGesture {
-                    withAnimation(.spring()) {
+                    withAnimation(.spring()){
                         showPortfolio.toggle()
                     }
                 }
@@ -188,9 +183,9 @@ extension HomeView {
         .padding(.horizontal)
     }
     
-    private var allCoinList: some View {
-        List {
-            ForEach(viewModel.allCoins) { coin in
+    private var allCoinList: some View{
+        List{
+            ForEach(vm.allCoins) { coin in
                 CoinRowView(coin: coin, showHoldingColumn: false)
                     .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 0))
                     .onTapGesture {
@@ -201,9 +196,9 @@ extension HomeView {
         .listStyle(PlainListStyle())
     }
     
-    private var portfolioCoinList: some View {
-        List {
-            ForEach(viewModel.portfolioCoins) { coin in
+    private var portfolioCoinList: some View{
+        List{
+            ForEach(vm.portfolioCoins) { coin in
                 CoinRowView(coin: coin, showHoldingColumn: true)
                     .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 0))
                     .onTapGesture {
@@ -214,58 +209,64 @@ extension HomeView {
         .listStyle(PlainListStyle())
     }
     
-    private func segue(coin: CoinModel) {
+    private func segue(coin: CoinModel){
         selectedCoin = coin
         showDetailView.toggle()
     }
     
-    private var columnTitles: some View {
-        HStack {
-            HStack(spacing: 4) {
+    private var columnTitles: some View{
+        HStack{
+            HStack(spacing: 4){
                 Text("Coin")
                 Image(systemName: "chevron.down")
-                    .opacity((viewModel.sortOption == .rank || viewModel.sortOption == .rankReversed) ? 1.0 : 0.0)
-                    .rotationEffect(Angle(degrees: viewModel.sortOption == .rank ? 0 : 180))
+                    .opacity((vm.sortOption == .rank || vm.sortOption == .rankReversed) ? 1.0 : 0.0)
+                    .rotationEffect(Angle(degrees: vm.sortOption == .rank ? 0 : 180))
             }
             .onTapGesture {
-                withAnimation(.default) {
-                    viewModel.sortOption = viewModel.sortOption == .rank ? .rankReversed : .rank
-                }            }
+                withAnimation(.default){
+                    vm.sortOption = vm.sortOption == .rank ? .rankReversed : .rank
+                }
+//                if vm.sortOption == .rank{
+//                    vm.sortOption = .rankReversed
+//                } else {
+//                    vm.sortOption = .rank
+//                }
+            }
             Spacer()
-            if showPortfolio {
-                HStack(spacing: 4) {
+            if showPortfolio{
+                HStack(spacing: 4){
                     Text("Holdings")
                     Image(systemName: "chevron.down")
-                        .opacity((viewModel.sortOption == .holdings || viewModel.sortOption == .holdingReversed) ? 1.0 : 0.0)
-                        .rotationEffect(Angle(degrees: viewModel.sortOption == .holdings ? 0 : 180))
+                        .opacity((vm.sortOption == .holdings || vm.sortOption == .holdingReversed) ? 1.0 : 0.0)
+                        .rotationEffect(Angle(degrees: vm.sortOption == .holdings ? 0 : 180))
                 }
                 .onTapGesture {
-                    withAnimation(.default) {
-                        viewModel.sortOption = viewModel.sortOption == .holdings ? .holdingReversed : .holdings
+                    withAnimation(.default){
+                        vm.sortOption = vm.sortOption == .holdings ? .holdingReversed : .holdings
                     }
                 }
             }
-            HStack(spacing: 4) {
+            HStack(spacing: 4){
                 Text("Price")
                 Image(systemName: "chevron.down")
-                    .opacity((viewModel.sortOption == .price || viewModel.sortOption == .priceReversed) ? 1.0 : 0.0)
-                    .rotationEffect(Angle(degrees: viewModel.sortOption == .price ? 0 : 180))
+                    .opacity((vm.sortOption == .price || vm.sortOption == .priceReversed) ? 1.0 : 0.0)
+                    .rotationEffect(Angle(degrees: vm.sortOption == .price ? 0 : 180))
             }
             .frame(width: UIScreen.main.bounds.width/3.5, alignment: .trailing)
             .onTapGesture {
-                withAnimation(.default) {
-                    viewModel.sortOption = viewModel.sortOption == .price ? .priceReversed : .price
+                withAnimation(.default){
+                    vm.sortOption = vm.sortOption == .price ? .priceReversed : .price
                 }
             }
             
             Button(action: {
                 withAnimation(.linear(duration: 2.0)) {
-                    viewModel.reloadData()
+                    vm.reloadData()
                 }
             }, label: {
                 Image(systemName: "goforward")
             })
-            .rotationEffect(Angle(degrees: viewModel.isLoading ? 360 : 0), anchor: .center)
+            .rotationEffect(Angle(degrees: vm.isLoading ? 360 : 0), anchor: .center)
         }
         .font(.caption)
         .foregroundColor(Color.theme.secondaryText)

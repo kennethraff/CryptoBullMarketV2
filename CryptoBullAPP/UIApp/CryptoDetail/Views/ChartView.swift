@@ -30,7 +30,7 @@ struct ChartView: View {
     }
     
     var body: some View {
-        VStack {
+        VStack{
             chartView
                 .frame(height: 200)
                 .background(chartBackground)
@@ -41,8 +41,8 @@ struct ChartView: View {
         }
         .font(.caption)
         .foregroundColor(Color.theme.secondaryText)
-        .onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+        .onAppear{
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2){
                 withAnimation(.linear(duration: 2.0)) {
                     percentage = 1.0
                 }
@@ -57,11 +57,13 @@ struct ChartView_Previews: PreviewProvider {
     }
 }
 
-extension ChartView {
-    private var chartView: some View {
+extension ChartView{
+    
+    private var chartView: some View{
         GeometryReader { geometry in
-            Path { path in
-                for index in data.indices {
+            Path{ path in
+                for index in data.indices{
+                    
                     let xPosition = geometry.size.width / CGFloat(data.count) * CGFloat(index + 1)
                     
                     let yAxis = maxY - minY
@@ -80,7 +82,7 @@ extension ChartView {
     }
     
     private var chartBackground: some View {
-        VStack {
+        VStack{
             Divider()
             Spacer()
             Divider()
@@ -90,7 +92,7 @@ extension ChartView {
     }
     
     private var chartYAxis: some View {
-        VStack {
+        VStack{
             Text(maxY.formattedwithAbbreviations())
             Spacer()
             Text(((maxY + minY) / 2).formattedwithAbbreviations())
@@ -100,7 +102,7 @@ extension ChartView {
     }
     
     private var chartDateLabels: some View {
-        HStack {
+        HStack{
             Text(startingData.asShortDateString())
             Spacer()
             Text(endingDate.asShortDateString())

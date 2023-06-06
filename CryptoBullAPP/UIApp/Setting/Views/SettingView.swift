@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct SettingView: View {
+    
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
-        NavigationView {
-            Text("Settings Page")
+        NavigationView{
+            Text("Create by Tegar marino")
             .listStyle(GroupedListStyle())
             .navigationTitle("Settings")
             .toolbar{

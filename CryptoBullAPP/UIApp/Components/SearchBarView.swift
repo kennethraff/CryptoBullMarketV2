@@ -12,7 +12,7 @@ struct SearchBarView: View {
     @Binding var searchText: String
     
     var body: some View {
-        HStack {
+        HStack{
             Image(systemName: "magnifyingglass")
                 .foregroundColor(
                     searchText.isEmpty ? Color.theme.secondaryText : Color.theme.accent

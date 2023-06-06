@@ -8,15 +8,15 @@
 import Foundation
 import SwiftUI
 
-extension PreviewProvider {
+extension PreviewProvider{
     
-    static var dev: DeveloperPreview {
+    static var dev: DeveloperPreview{
         return DeveloperPreview.instance
     }
     
 }
 
-class DeveloperPreview {
+class DeveloperPreview{
     
     static let instance = DeveloperPreview()
     private init() {}

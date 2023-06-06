@@ -10,13 +10,13 @@ import SafariServices
 
 struct NewsView: View {
     @StateObject var viewModel = NewsViewModel()
-    @State private var keyword = "Bitcoin"
+    @State private var keyword = "BNB"
     
     var body: some View {
         NavigationView {
             VStack {
                 
-                HStack {
+                HStack{
                     Image(systemName: "magnifyingglass")
                         .foregroundColor(
                             keyword.isEmpty ? Color.theme.secondaryText : Color.theme.accent
@@ -25,20 +25,21 @@ struct NewsView: View {
                     TextField("Search by name like bitcoin or something", text: $keyword, onCommit: {
                         viewModel.fetchArticles(withKeyword: keyword)
                     })
-                    .foregroundColor(Color.theme.accent)
-                    .overlay(
-                        Image(systemName: "xmark.circle.fill")
-                            .padding()
-                            .offset(x: 10)
-                            .foregroundColor(Color.theme.accent)
-                            .opacity(keyword.isEmpty ? 0.0 : 1.0)
-                            .onTapGesture {
-                                UIApplication.shared.endEditing()
-                                keyword = ""
-                            }
-                        ,alignment: .trailing
-                    )
-                    .autocorrectionDisabled()
+                        .foregroundColor(Color.theme.accent)
+                        .overlay(
+                            Image(systemName: "xmark.circle.fill")
+                                .padding()
+                                .offset(x: 10)
+                                .foregroundColor(Color.theme.accent)
+                                .opacity(keyword.isEmpty ? 0.0 : 1.0)
+                                .onTapGesture {
+                                    UIApplication.shared.endEditing()
+                                    keyword = ""
+                                }
+                            
+                            ,alignment: .trailing
+                        )
+                        .autocorrectionDisabled()
                 }
                 .font(.headline)
                 .padding()
@@ -51,10 +52,15 @@ struct NewsView: View {
                 )
                 .padding(.horizontal)
                 
-                // Show a list of articles
                 List(viewModel.articles) { article in
                     NavigationLink(destination: WebView(url: article.url)) {
                         VStack(alignment: .leading) {
+    //                        Text(article.title)
+    //                            .font(.headline)
+    //                        Text(article.description)
+    //                            .font(.subheadline)
+    //                        Text(article.publishedAt)
+    //                            .font(.caption)
                             HStack{
                                 Image(systemName: "clock")
                                     .padding(.leading)
@@ -79,6 +85,7 @@ struct NewsView: View {
                 }
                 .listStyle(PlainListStyle())
             }
+//            .navigationTitle("News")
             .toolbar {
                 ToolbarItem(placement: .principal) {
                     Text("Crypto News")
@@ -90,7 +97,6 @@ struct NewsView: View {
             }
         }
         .onAppear {
-            // Fetch articles relating to keyword
             viewModel.fetchArticles(withKeyword: keyword)
         }
     }
@@ -101,3 +107,34 @@ struct NewsView_Previews: PreviewProvider {
         NewsView()
     }
 }
+
+//extension NewsView{
+//    private var upperColumn: some View{
+//        VStack(alignment: .leading){
+//            HStack{
+//                Text("\(viewModel.title)")
+//                    .fontWeight(.light)
+//                    .foregroundColor(Color.theme.accent)
+//                Image(systemName: "clock")
+//                    .padding(.leading)
+//                    .foregroundColor(Color.theme.secondaryText)
+//                Text("\(viewModel.publishedAt)")
+//                    .fontWeight(.light)
+//            }
+//            .font(.system(size: 10))
+//
+//        }
+//        .padding(.horizontal)
+//    }
+//
+//    private var middleColumn: some View{
+//        HStack{
+//            Text("\(viewModel.title)")
+//                .font(.title)
+//                .foregroundColor(Color.theme.secondaryText)
+//                .frame(minWidth: 30)
+//                .fontWeight(.bold)
+//        }
+//        .padding(.horizontal)
+//    }
+//}

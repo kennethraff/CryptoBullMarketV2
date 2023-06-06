@@ -8,7 +8,8 @@
 import Foundation
 import Combine
 
-class DetailViewModel: ObservableObject {
+class DetailViewModel: ObservableObject{
+    
     @Published var overviewStatistics: [StatisticModel] = []
     @Published var additionalStatistics: [StatisticModel] = []
     @Published var coinDescriptiion: String? = nil
@@ -19,13 +20,14 @@ class DetailViewModel: ObservableObject {
     private let coinDetailService: CoinDetailDataService
     private var cancelables = Set<AnyCancellable>()
     
-    init(coin: CoinModel) {
+    init(coin: CoinModel){
         self.coin = coin
         self.coinDetailService = CoinDetailDataService(coin: coin)
         self.addSubscribers()
     }
     
-    private func addSubscribers() {
+    private func addSubscribers(){
+        
         coinDetailService.$coinDetails
             .combineLatest($coin)
             .map(mapDataToStatistics)
@@ -44,13 +46,14 @@ class DetailViewModel: ObservableObject {
             .store(in: &cancelables)
     }
     
-    private func mapDataToStatistics(coinDetailModel: CoinDetailModel?, coinModel: CoinModel) -> (overview: [StatisticModel], addtional: [StatisticModel]) {
+    private func mapDataToStatistics(coinDetailModel: CoinDetailModel?, coinModel: CoinModel) -> (overview: [StatisticModel], addtional: [StatisticModel]){
+                        
         let overviewArray = createOverviewArray(coinModel: coinModel)
         let additionalArray = createAdditionalArray(coinDetailModel: coinDetailModel, coinModel: coinModel)
         return (overviewArray, additionalArray)
     }
     
-    private func createOverviewArray(coinModel: CoinModel) -> [StatisticModel] {
+    private func createOverviewArray(coinModel: CoinModel) -> [StatisticModel]{
         let price = coinModel.currentPrice.asCurrencyWith6Decimals()
         let pricePercentageChange = coinModel.priceChangePercentage24H
         let priceStat = StatisticModel(title: "Current Price", value: price, percentageChange: pricePercentageChange)

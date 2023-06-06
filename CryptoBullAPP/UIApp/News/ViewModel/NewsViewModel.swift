@@ -11,7 +11,6 @@ import Combine
 class NewsViewModel: ObservableObject {
     @Published var articles = [NewsModel]()
     
-    // Fetch article data from API
     func fetchArticles(withKeyword keyword: String) {
         let keywordEncoded = keyword.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
         let urlString = "https://newsapi.org/v2/everything?q=\(keywordEncoded)&apiKey=aac784ce646d46789241ef4b404114c2"
