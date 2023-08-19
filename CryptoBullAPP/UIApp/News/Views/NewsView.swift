@@ -22,7 +22,7 @@ struct NewsView: View {
                             keyword.isEmpty ? Color.theme.secondaryText : Color.theme.accent
                         )
                     
-                    TextField("Search by name like bitcoin or something", text: $keyword, onCommit: {
+                    TextField("Search by name like bnbc or something", text: $keyword, onCommit: {
                         viewModel.fetchArticles(withKeyword: keyword)
                     })
                         .foregroundColor(Color.theme.accent)

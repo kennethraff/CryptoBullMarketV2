@@ -5,7 +5,6 @@
 //  Created by Tegar Marino on 03/06/23.
 //
 
-// Bagian Miranda nn
 import Foundation
 import SwiftUI
 import SafariServices
