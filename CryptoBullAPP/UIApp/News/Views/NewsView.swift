@@ -88,7 +88,7 @@ struct NewsView: View {
 //            .navigationTitle("News")
             .toolbar {
                 ToolbarItem(placement: .principal) {
-                    Text("Crypto News")
+                    Text("News")
                         .font(.headline)
                         .foregroundColor(Color.theme.accent)
                         .fontWeight(.bold)
